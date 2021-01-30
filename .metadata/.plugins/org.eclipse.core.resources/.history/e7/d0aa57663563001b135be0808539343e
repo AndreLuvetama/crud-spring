@@ -1,0 +1,5 @@
+package net.crud.springbootcrud.exception;
+
+public enum ResourceNotFoundException {
+
+}

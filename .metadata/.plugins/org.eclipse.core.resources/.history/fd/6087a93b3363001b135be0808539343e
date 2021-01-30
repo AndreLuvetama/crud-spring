@@ -1,0 +1,5 @@
+package net.crud.springbootcrud.repository;
+
+public class PessoaRespositorio {
+
+}

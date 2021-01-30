@@ -1,0 +1,71 @@
+package net.crud.springbootcrud.model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "Pessoa")
+public class Pessoa {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(name= "nome")
+	private String nome;
+	@Column(name = "email")
+	private String email;
+	@Column(name = "sobreNome")
+	private String sobreNome;
+	@Column(name = "dataNasc")
+	private Date dataNasc;
+	
+	public Pessoa() {}
+	
+	public Pessoa(String nome, String email, String sobreNome, Date dataNasc) {
+		this.nome = nome;
+		this.email = email;
+		this.sobreNome = sobreNome;
+		this.dataNasc = dataNasc;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getSobreNome() {
+		return sobreNome;
+	}
+	public void setSobreNome(String sobreNome) {
+		this.sobreNome = sobreNome;
+	}
+	public Date getDataNasc() {
+		return dataNasc;
+	}
+	public void setDataNasc(Date dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+	
+		
+
+}
